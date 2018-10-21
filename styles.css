@@ -1,0 +1,51 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+    padding: 40px 0;
+}
+svg {
+    pointer-events: visiblePainted;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.hex  {
+    cursor: pointer;
+}
+.hex polygon {
+    pointer-events: visiblePainted;
+    fill: hsl(60, 10%, 95%);
+    stroke: hsl(0, 0%, 70%);
+    stroke-width: 2px;
+    transition: fill 0.2s;
+    
+}
+.hex:hover polygon {
+    fill: hsl(60, 69%, 62%);
+}
+
+.hex * {
+    pointer-events: none;
+}
+
+.hex text {
+    text-anchor: middle;
+    font-size: 70px;
+}
+
+table th {
+    border: 1px solid rgba(0,0,0,0.12);
+    vertical-align: top;
+}
+table td {
+    border: 1px solid rgba(0,0,0,0.12);
+}
